@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using AuthenticationAPI.Model;
 using AuthenticationAPI.Service;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthenticationAPI.Controllers
 {
+    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
